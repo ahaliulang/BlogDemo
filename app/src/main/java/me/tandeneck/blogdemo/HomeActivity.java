@@ -46,8 +46,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private void initData() {
         Random random = new Random();
-        List<HomeEntity> datas = Arrays.asList(new HomeEntity("SeekBar", mBgRes[random.nextInt(5)], SeekBarActivity.class),
-                new HomeEntity("SeekBar", mBgRes[random.nextInt(5)], SeekBarActivity.class));
+        List<HomeEntity> datas = Arrays.asList(new HomeEntity("SeekBar", mBgRes[random.nextInt(5)], SeekBarActivity.class));
         HomeAdapter homeAdapter = new HomeAdapter(this,datas);
         mRV.setAdapter(homeAdapter);
     }
