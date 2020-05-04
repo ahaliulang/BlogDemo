@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".service.ServiceMainActivity">
+
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开启服务"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/stop_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="停止服务"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/bind_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="绑定服务"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/unbind_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="解绑服务"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/start_foreground_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开启前台服务"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/stop_foreground_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关闭前台服务"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/broadcast_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="通过广播实现Activity与Service通信"
+        android:textAllCaps="false" />
+
+</LinearLayout>

@@ -21,15 +21,16 @@ import java.util.Random;
 
 import me.tandeneck.blogdemo.entity.HomeEntity;
 import me.tandeneck.blogdemo.seekbar.SeekBarActivity;
+import me.tandeneck.blogdemo.service.ServiceMainActivity;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends BaseActivity {
 
     private RecyclerView mRV;
-    private int[] mBgRes = {R.color.home_item_bg_1,
-            R.color.home_item_bg_2,
-            R.color.home_item_bg_3,
-            R.color.home_item_bg_4,
-            R.color.home_item_bg_5};
+    private int[] mBgRes = {R.drawable.home_item_bg_1,
+            R.drawable.home_item_bg_2,
+            R.drawable.home_item_bg_3,
+            R.drawable.home_item_bg_4,
+            R.drawable.home_item_bg_5};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +47,8 @@ public class HomeActivity extends AppCompatActivity {
 
     private void initData() {
         Random random = new Random();
-        List<HomeEntity> datas = Arrays.asList(new HomeEntity("SeekBar", mBgRes[random.nextInt(5)], SeekBarActivity.class));
+        List<HomeEntity> datas = Arrays.asList(new HomeEntity("SeekBar", mBgRes[random.nextInt(5)], SeekBarActivity.class),
+                new HomeEntity("Service", mBgRes[random.nextInt(5)], ServiceMainActivity.class));
         HomeAdapter homeAdapter = new HomeAdapter(this,datas);
         mRV.setAdapter(homeAdapter);
     }
@@ -72,13 +74,13 @@ public class HomeActivity extends AppCompatActivity {
         }
 
         @Override
-        public void onBindViewHolder(@NonNull HomeItemViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull HomeItemViewHolder holder, final int position) {
             holder.mTv.setText(mDatas.get(position).getTitle());
             holder.mIv.setImageResource(mDatas.get(position).getRes());
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    mContext.startActivity(new Intent(mContext,SeekBarActivity.class));
+                    mContext.startActivity(new Intent(mContext,mDatas.get(position).getClazz()));
                 }
             });
         }

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BlogDemo</string>
+
+    <string name="receiver_action">me.tandeneck.blogdemo.service.receiver.MY_RECEIVER</string>
 </resources>

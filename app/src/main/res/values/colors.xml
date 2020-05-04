@@ -3,9 +3,9 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="home_item_bg_1">#F44336</color>
-    <color name="home_item_bg_2">#673AB7</color>
-    <color name="home_item_bg_3">#03A9F4</color>
-    <color name="home_item_bg_4">#009688</color>
-    <color name="home_item_bg_5">#FF9800</color>
+    <color name="color_home_item_1">#F44336</color>
+    <color name="color_home_item_2">#673AB7</color>
+    <color name="color_home_item_3">#03A9F4</color>
+    <color name="color_home_item_4">#009688</color>
+    <color name="color_home_item_5">#FF9800</color>
 </resources>

@@ -9,6 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".service.receiver.ReceiverActivity" />
+
+        <activity
+            android:name=".service.NotificationActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".service.ServiceMainActivity" />
         <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,7 +22,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".seekbar.SeekBarActivity"></activity>
+        <activity android:name=".seekbar.SeekBarActivity" />
+
+        <service
+            android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.ForegroundService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".service.receiver.MsgService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
 </manifest>

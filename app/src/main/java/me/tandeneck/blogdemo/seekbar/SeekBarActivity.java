@@ -2,14 +2,16 @@ package me.tandeneck.blogdemo.seekbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActionBar;
 import android.os.Bundle;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import me.tandeneck.blogdemo.BaseActivity;
 import me.tandeneck.blogdemo.R;
 
-public class SeekBarActivity extends AppCompatActivity {
+public class SeekBarActivity extends BaseActivity {
 
     private SeekBar mSeekbar;
     private TextView mTextViewCurrent;

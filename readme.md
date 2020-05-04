@@ -1,3 +1,3 @@
 #JustBlogDemo
 
-[jianshu.blog](https://github.com/ahaliulang/BlogDemo/tree/master/app/src/main/java/me/tandeneck/blogdemo/seekbar)
+[jianshu.blog](https://www.jianshu.com/u/ead6dbc8fe54)
