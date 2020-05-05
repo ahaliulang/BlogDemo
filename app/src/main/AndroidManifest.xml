@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".handlerthread.HandlerThreadActivity"></activity>
         <activity android:name=".service.receiver.ReceiverActivity" />
-
         <activity
             android:name=".service.NotificationActivity"
             android:launchMode="singleTop" />
@@ -32,11 +32,10 @@
             android:name=".service.ForegroundService"
             android:enabled="true"
             android:exported="true" />
-
         <service
             android:name=".service.receiver.MsgService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
     </application>
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />

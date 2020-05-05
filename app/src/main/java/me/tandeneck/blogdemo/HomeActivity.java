@@ -1,10 +1,5 @@
 package me.tandeneck.blogdemo;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,12 +9,17 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
 import me.tandeneck.blogdemo.entity.HomeEntity;
+import me.tandeneck.blogdemo.handlerthread.HandlerThreadActivity;
 import me.tandeneck.blogdemo.seekbar.SeekBarActivity;
 import me.tandeneck.blogdemo.service.ServiceMainActivity;
 
@@ -48,7 +48,8 @@ public class HomeActivity extends BaseActivity {
     private void initData() {
         Random random = new Random();
         List<HomeEntity> datas = Arrays.asList(new HomeEntity("SeekBar", mBgRes[random.nextInt(5)], SeekBarActivity.class),
-                new HomeEntity("Service", mBgRes[random.nextInt(5)], ServiceMainActivity.class));
+                new HomeEntity("Service", mBgRes[random.nextInt(5)], ServiceMainActivity.class),
+                new HomeEntity("HandlerThread", mBgRes[random.nextInt(5)], HandlerThreadActivity.class));
         HomeAdapter homeAdapter = new HomeAdapter(this,datas);
         mRV.setAdapter(homeAdapter);
     }
